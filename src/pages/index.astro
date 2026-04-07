@@ -1,11 +1,10 @@
 ---
-import { getEmDashCollection, getSiteSettings } from 'emdash'
+import { getEmDashCollection } from 'emdash'
 import profile from '../assets/profile.jpg'
 import ProjectCard from '../components/ProjectCard.astro'
 import SpotifyHero from '../components/SpotifyHero.astro'
 import Base from '../layouts/Base.astro'
 
-const settings = await getSiteSettings()
 const { entries: projects, cacheHint } = await getEmDashCollection('projects')
 
 Astro.cache.set(cacheHint)
@@ -20,20 +19,18 @@ const featuredProjects = projects
 	.slice(0, 4)
 ---
 
-<div class="hero-container">
+<Base>
 	<SpotifyHero
 		name="hayatosc"
 		job="Student Engineer"
 		bio="Tokyo University of Science"
 		github="https://github.com/hayatosc"
-		linkedin="#"
+		twitter="#"
 		email="mailto:your@email.com"
 		website="#"
 		photo={profile}
 		startYear="2023"
 	/>
-</div>
-<Base>
 	{featuredProjects.length > 0 ? (
 			<section class="featured">
 				<header class="section-header">
@@ -65,92 +62,3 @@ const featuredProjects = projects
 			</section>
 		)}
 </Base>
-
-<style>
-.hero-container {
-	display: grid;
-	place-content: center;
-	width: 100%;
-	height: 100svh;
-}
-.featured {
-	max-width: var(--wide-width);
-	margin: 0 auto;
-	padding: 0 var(--spacing-lg) var(--spacing-4xl);
-}
-
-.section-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: baseline;
-	margin-bottom: var(--spacing-2xl);
-	padding-bottom: var(--spacing-md);
-	border-bottom: 1px solid var(--color-border);
-}
-
-.section-title {
-	font-size: var(--font-size-lg);
-	font-weight: 500;
-}
-
-.section-link {
-	font-size: var(--font-size-sm);
-	color: var(--color-muted);
-	text-decoration: none;
-	transition: color var(--transition-fast);
-}
-
-.section-link:hover {
-	color: var(--color-text);
-}
-
-.projects-grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: var(--spacing-2xl);
-}
-
-.empty-state {
-	text-align: center;
-	padding: var(--spacing-4xl) var(--spacing-lg);
-	max-width: 400px;
-	margin: 0 auto;
-}
-
-.empty-state h2 {
-	font-size: var(--font-size-xl);
-	margin-bottom: var(--spacing-sm);
-}
-
-.empty-state p {
-	color: var(--color-muted);
-	margin-bottom: var(--spacing-lg);
-}
-
-.btn {
-	display: inline-block;
-	padding: var(--spacing-sm) var(--spacing-lg);
-	background: var(--color-text);
-	color: var(--color-bg);
-	text-decoration: none;
-	border-radius: var(--radius);
-	font-size: var(--font-size-sm);
-	transition: opacity var(--transition-fast);
-}
-
-.btn:hover {
-	opacity: 0.85;
-}
-
-@media (max-width: 768px) {
-	.projects-grid {
-		grid-template-columns: 1fr;
-	}
-
-	.section-header {
-		flex-direction: column;
-		gap: var(--spacing-sm);
-		align-items: flex-start;
-	}
-}
-</style>

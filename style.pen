@@ -5428,7 +5428,7 @@
                       "name": "prevIcon",
                       "width": 26,
                       "height": 26,
-                      "iconFontName": "linkedin",
+                      "iconFontName": "twitter",
                       "iconFontFamily": "lucide",
                       "fill": "#FFFFFF"
                     },
@@ -5790,7 +5790,7 @@
                           "name": "prevIcon",
                           "width": 26,
                           "height": 26,
-                          "iconFontName": "linkedin",
+                          "iconFontName": "twitter",
                           "iconFontFamily": "lucide",
                           "fill": "#FFFFFF"
                         },
@@ -5857,6 +5857,109 @@
           "children": [
             {
               "type": "frame",
+              "id": "hiy2C",
+              "name": "header",
+              "width": "fill_container",
+              "height": 80,
+              "fill": "#00000000",
+              "justifyContent": "end",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "HMcg1",
+                  "name": "headerPill",
+                  "height": 48,
+                  "fill": "#FFFFFF18",
+                  "cornerRadius": 100,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FFFFFF18"
+                  },
+                  "effect": {
+                    "type": "background_blur",
+                    "radius": 20
+                  },
+                  "gap": 32,
+                  "padding": [
+                    0,
+                    28
+                  ],
+                  "justifyContent": "end",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mXyP6",
+                      "name": "logo",
+                      "fill": "#FFFFFF",
+                      "content": "hayatosc",
+                      "fontFamily": "Doto",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "N45tY",
+                      "name": "navHome",
+                      "fill": "#AAAAAA",
+                      "content": "/home",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "ayDjm",
+                      "name": "navBlog",
+                      "fill": "#AAAAAA",
+                      "content": "/blog",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "IdfYH",
+                      "name": "navWork",
+                      "fill": "#AAAAAA",
+                      "content": "/work",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "DZeZF",
+                      "name": "navAbout",
+                      "fill": "#AAAAAA",
+                      "content": "/about",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "IUlNK",
+                      "name": "darkModeToggle",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "moon-fill",
+                      "iconFontFamily": "phosphor",
+                      "weight": 400,
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
               "id": "LnJnJ",
               "name": "hero",
               "width": "fill_container",
@@ -5888,7 +5991,8 @@
                   "fill": "#FFFFFF",
                   "content": "hayatosc",
                   "fontFamily": "Doto",
-                  "fontSize": 72
+                  "fontSize": 72,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "text",
@@ -5897,9 +6001,9 @@
                   "fill": "#FFFFFF",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "SOFTWARE\nENGINEER",
+                  "content": "engineer",
                   "lineHeight": 0.9,
-                  "fontFamily": "Space Grotesk",
+                  "fontFamily": "Space Mono",
                   "fontSize": 72,
                   "fontWeight": "300",
                   "letterSpacing": -2
@@ -5913,149 +6017,9 @@
                   "width": "fill_container",
                   "content": "Crafting seamless digital experiences with modern web technologies.\nSpecializing in full-stack development, cloud architecture, and UI/UX design.",
                   "lineHeight": 1.6,
-                  "fontFamily": "Space Grotesk",
-                  "fontSize": 15
-                },
-                {
-                  "type": "frame",
-                  "id": "RGIGo",
-                  "name": "statsRow",
-                  "width": "fill_container",
-                  "gap": 24,
-                  "padding": [
-                    32,
-                    0,
-                    0,
-                    0
-                  ],
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "LtbqC",
-                      "name": "stat1",
-                      "fill": "#111111",
-                      "cornerRadius": 8,
-                      "stroke": {
-                        "thickness": 1,
-                        "fill": "#333333"
-                      },
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "enabled": false,
-                        "color": "#00000000"
-                      },
-                      "layout": "vertical",
-                      "gap": 8,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "RbS5u",
-                          "name": "s1num",
-                          "fill": "#FFFFFF",
-                          "content": "50+",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 36
-                        },
-                        {
-                          "type": "text",
-                          "id": "MOSpZ",
-                          "name": "s1lbl",
-                          "fill": "#999999",
-                          "content": "COMPLETED PROJECTS",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 11,
-                          "fontWeight": "normal",
-                          "letterSpacing": 4
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "ZkNsV",
-                      "name": "stat2",
-                      "fill": "#111111",
-                      "cornerRadius": 8,
-                      "stroke": {
-                        "thickness": 1,
-                        "fill": "#333333"
-                      },
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "enabled": false,
-                        "color": "#00000000"
-                      },
-                      "layout": "vertical",
-                      "gap": 8,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "5MMai",
-                          "name": "s2num",
-                          "fill": "#FFFFFF",
-                          "content": "2K+",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 36
-                        },
-                        {
-                          "type": "text",
-                          "id": "7ur9w",
-                          "name": "s2lbl",
-                          "fill": "#999999",
-                          "content": "GITHUB COMMITS",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 11,
-                          "fontWeight": "normal",
-                          "letterSpacing": 4
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "kKUPr",
-                      "name": "stat3",
-                      "fill": "#111111",
-                      "cornerRadius": 8,
-                      "stroke": {
-                        "thickness": 1,
-                        "fill": "#D71921"
-                      },
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "enabled": false,
-                        "color": "#00000000"
-                      },
-                      "layout": "vertical",
-                      "gap": 8,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "15uGy",
-                          "name": "s3num",
-                          "fill": "#D71921",
-                          "content": "15+",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 36
-                        },
-                        {
-                          "type": "text",
-                          "id": "Laby7",
-                          "name": "s3lbl",
-                          "fill": "#999999",
-                          "content": "TECH STACK",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 11,
-                          "fontWeight": "normal",
-                          "letterSpacing": 4
-                        }
-                      ]
-                    }
-                  ]
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -6095,21 +6059,10 @@
                       "id": "s9Y4N",
                       "name": "locCity",
                       "fill": "#FFFFFF",
-                      "content": "TOKYO",
+                      "content": "TOKYO,\nJAPAN",
                       "fontFamily": "Doto",
                       "fontSize": 56,
                       "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "qspLs",
-                      "name": "locCountry",
-                      "fill": "#999999",
-                      "content": "JAPAN",
-                      "fontFamily": "Space Mono",
-                      "fontSize": 16,
-                      "fontWeight": "normal",
-                      "letterSpacing": 6
                     },
                     {
                       "type": "text",
@@ -6138,7 +6091,7 @@
                       "width": 300,
                       "content": "Currently based in Tokyo.\nAvailable for remote work globally.",
                       "lineHeight": 1.6,
-                      "fontFamily": "Space Grotesk",
+                      "fontFamily": "Noto Sans JP",
                       "fontSize": 14,
                       "fontWeight": "normal"
                     }
@@ -6345,7 +6298,7 @@
                       "width": 300,
                       "content": "FEATURED\nWORK",
                       "lineHeight": 1,
-                      "fontFamily": "Space Grotesk",
+                      "fontFamily": "Noto Sans JP",
                       "fontSize": 34,
                       "fontWeight": "300"
                     },
@@ -6503,7 +6456,7 @@
                               "name": "c1title",
                               "fill": "#FFFFFF",
                               "content": "EmDash Portfolio",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 17,
                               "fontWeight": "500"
                             },
@@ -6576,8 +6529,9 @@
                               "textGrowth": "fixed-width",
                               "width": "fill_container",
                               "content": "A modern portfolio with headless CMS architecture and real-time content updates",
-                              "fontFamily": "Space Grotesk",
-                              "fontSize": 13
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "frame",
@@ -6735,7 +6689,7 @@
                               "name": "c2title",
                               "fill": "#FFFFFF",
                               "content": "E-Commerce Platform",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 17,
                               "fontWeight": "500"
                             },
@@ -6808,8 +6762,9 @@
                               "textGrowth": "fixed-width",
                               "width": "fill_container",
                               "content": "Full-featured online store with payment processing and inventory management",
-                              "fontFamily": "Space Grotesk",
-                              "fontSize": 13
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "frame",
@@ -6976,7 +6931,7 @@
                               "name": "c3title",
                               "fill": "#FFFFFF",
                               "content": "Real-time Chat API",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 17,
                               "fontWeight": "500"
                             },
@@ -7049,8 +7004,9 @@
                               "textGrowth": "fixed-width",
                               "width": "fill_container",
                               "content": "Scalable messaging system with real-time notifications and presence detection",
-                              "fontFamily": "Space Grotesk",
-                              "fontSize": 13
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "frame",
@@ -7160,7 +7116,7 @@
                       "width": 220,
                       "content": "PROFESSIONAL\nJOURNEY",
                       "lineHeight": 1.1,
-                      "fontFamily": "Space Grotesk",
+                      "fontFamily": "Noto Sans JP",
                       "fontSize": 24,
                       "fontWeight": "300"
                     },
@@ -7174,7 +7130,8 @@
                       "content": "Building products\nsince 2022",
                       "lineHeight": 1.5,
                       "fontFamily": "Space Mono",
-                      "fontSize": 12
+                      "fontSize": 12,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -7239,7 +7196,7 @@
                           "name": "e1title",
                           "fill": "#FFFFFF",
                           "content": "Lead Frontend Engineer",
-                          "fontFamily": "Space Grotesk",
+                          "fontFamily": "Noto Sans JP",
                           "fontSize": 16,
                           "fontWeight": "500"
                         },
@@ -7274,7 +7231,7 @@
                           "width": "fill_container",
                           "content": "Building scalable web applications with modern frameworks and best practices",
                           "lineHeight": 1.5,
-                          "fontFamily": "Space Grotesk",
+                          "fontFamily": "Noto Sans JP",
                           "fontSize": 13,
                           "fontWeight": "normal"
                         }
@@ -7333,7 +7290,7 @@
                           "name": "e2title",
                           "fill": "#FFFFFF",
                           "content": "Open Source Contributor",
-                          "fontFamily": "Space Grotesk",
+                          "fontFamily": "Noto Sans JP",
                           "fontSize": 16,
                           "fontWeight": "500"
                         },
@@ -7368,7 +7325,7 @@
                           "width": "fill_container",
                           "content": "Contributing to React, TypeScript, and Node.js ecosystem projects",
                           "lineHeight": 1.5,
-                          "fontFamily": "Space Grotesk",
+                          "fontFamily": "Noto Sans JP",
                           "fontSize": 13,
                           "fontWeight": "normal"
                         }
@@ -7417,7 +7374,7 @@
                   "width": 300,
                   "content": "TECH\nSTACK",
                   "lineHeight": 0.95,
-                  "fontFamily": "Space Grotesk",
+                  "fontFamily": "Noto Sans JP",
                   "fontSize": 34,
                   "fontWeight": "300"
                 },
@@ -7481,7 +7438,7 @@
                                   "name": "t1name",
                                   "fill": "#FFFFFF",
                                   "content": "TypeScript",
-                                  "fontFamily": "Space Grotesk",
+                                  "fontFamily": "Noto Sans JP",
                                   "fontSize": 15,
                                   "fontWeight": "500"
                                 }
@@ -7493,7 +7450,7 @@
                               "name": "t1Desc",
                               "fill": "#666666",
                               "content": "Type-safe JavaScript",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 12,
                               "fontWeight": "normal"
                             },
@@ -7566,7 +7523,7 @@
                                   "name": "t2name",
                                   "fill": "#FFFFFF",
                                   "content": "React / Next.js",
-                                  "fontFamily": "Space Grotesk",
+                                  "fontFamily": "Noto Sans JP",
                                   "fontSize": 15,
                                   "fontWeight": "500"
                                 }
@@ -7578,7 +7535,7 @@
                               "name": "t2Desc",
                               "fill": "#666666",
                               "content": "Modern web frameworks",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 12,
                               "fontWeight": "normal"
                             },
@@ -7660,7 +7617,7 @@
                                   "name": "t3name",
                                   "fill": "#FFFFFF",
                                   "content": "Docker",
-                                  "fontFamily": "Space Grotesk",
+                                  "fontFamily": "Noto Sans JP",
                                   "fontSize": 15,
                                   "fontWeight": "500"
                                 }
@@ -7672,7 +7629,7 @@
                               "name": "t3Desc",
                               "fill": "#666666",
                               "content": "Containerization platform",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 12,
                               "fontWeight": "normal"
                             },
@@ -7745,7 +7702,7 @@
                                   "name": "t4name",
                                   "fill": "#FFFFFF",
                                   "content": "PostgreSQL",
-                                  "fontFamily": "Space Grotesk",
+                                  "fontFamily": "Noto Sans JP",
                                   "fontSize": 15,
                                   "fontWeight": "500"
                                 }
@@ -7757,7 +7714,7 @@
                               "name": "t4Desc",
                               "fill": "#666666",
                               "content": "Relational database",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 12,
                               "fontWeight": "normal"
                             },
@@ -7798,94 +7755,6 @@
               "fill": "#222222",
               "width": "fill_container",
               "height": 1
-            },
-            {
-              "type": "frame",
-              "id": "ECxiw",
-              "name": "ctaSection",
-              "width": "fill_container",
-              "fill": "#000000",
-              "layout": "vertical",
-              "gap": 28,
-              "padding": [
-                80,
-                80,
-                100,
-                80
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "CNJWh",
-                  "name": "ctaTitle",
-                  "fill": "#FFFFFF",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "LET'S WORK\nTOGETHER",
-                  "lineHeight": 0.95,
-                  "textAlign": "center",
-                  "fontFamily": "Space Grotesk",
-                  "fontSize": 60,
-                  "fontWeight": "300"
-                },
-                {
-                  "type": "text",
-                  "id": "ciePD",
-                  "name": "ctaSub",
-                  "fill": "#666666",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Have a project in mind? Let's create something amazing together.\nOpen to freelance opportunities and collaborations.",
-                  "textAlign": "center",
-                  "fontFamily": "Space Grotesk",
-                  "fontSize": 16,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "hEkxo",
-                  "name": "ctaBtn",
-                  "height": 64,
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 32,
-                  "effect": {
-                    "type": "shadow",
-                    "shadowType": "outer",
-                    "enabled": false,
-                    "color": "#00000000"
-                  },
-                  "gap": 10,
-                  "padding": [
-                    0,
-                    40
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "hWBm6",
-                      "name": "ctaBtnTxt",
-                      "fill": "#000000",
-                      "content": "CONTACT →",
-                      "fontFamily": "Space Mono",
-                      "fontSize": 13,
-                      "fontWeight": "800",
-                      "letterSpacing": 2
-                    },
-                    {
-                      "type": "icon_font",
-                      "id": "rYoka",
-                      "name": "ctaBtnIcon",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "mail",
-                      "iconFontFamily": "lucide",
-                      "fill": "#000000"
-                    }
-                  ]
-                }
-              ]
             }
           ]
         }
@@ -8198,7 +8067,7 @@
                           "name": "prevIcon",
                           "width": 26,
                           "height": 26,
-                          "iconFontName": "linkedin",
+                          "iconFontName": "twitter",
                           "iconFontFamily": "lucide",
                           "fill": "#FFFFFF"
                         },
@@ -8265,6 +8134,108 @@
           "children": [
             {
               "type": "frame",
+              "id": "UJ7lk",
+              "name": "header",
+              "width": "fill_container",
+              "height": 80,
+              "fill": "#F5F5F500",
+              "justifyContent": "end",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "EDgtM",
+                  "name": "headerPill",
+                  "height": 48,
+                  "fill": "#00000012",
+                  "cornerRadius": 100,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#00000018"
+                  },
+                  "effect": {
+                    "type": "background_blur",
+                    "radius": 20
+                  },
+                  "gap": 32,
+                  "padding": [
+                    0,
+                    28
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pC8Lg",
+                      "name": "logo",
+                      "fill": "#111111",
+                      "content": "hayatosc",
+                      "fontFamily": "Doto",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "5GYfp",
+                      "name": "navHome",
+                      "fill": "#555555",
+                      "content": "/home",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "40dM0",
+                      "name": "navBlog",
+                      "fill": "#555555",
+                      "content": "/blog",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "9jLXF",
+                      "name": "navWork",
+                      "fill": "#555555",
+                      "content": "/work",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "PzOAm",
+                      "name": "navAbout",
+                      "fill": "#555555",
+                      "content": "/about",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "ITubu",
+                      "name": "darkModeToggle",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "moon",
+                      "iconFontFamily": "phosphor",
+                      "weight": 400,
+                      "fill": "#555555"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
               "id": "Xv2qp",
               "name": "hero",
               "width": "fill_container",
@@ -8296,7 +8267,8 @@
                   "fill": "#000000",
                   "content": "hayatosc",
                   "fontFamily": "Doto",
-                  "fontSize": 72
+                  "fontSize": 72,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "text",
@@ -8305,9 +8277,9 @@
                   "fill": "#000000",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "SOFTWARE\nENGINEER",
+                  "content": "engineer",
                   "lineHeight": 0.9,
-                  "fontFamily": "Space Grotesk",
+                  "fontFamily": "Space Mono",
                   "fontSize": 72,
                   "fontWeight": "300",
                   "letterSpacing": -2
@@ -8321,149 +8293,9 @@
                   "width": "fill_container",
                   "content": "Crafting seamless digital experiences with modern web technologies.\nSpecializing in full-stack development, cloud architecture, and UI/UX design.",
                   "lineHeight": 1.6,
-                  "fontFamily": "Space Grotesk",
-                  "fontSize": 15
-                },
-                {
-                  "type": "frame",
-                  "id": "LNZuH",
-                  "name": "statsRow",
-                  "width": "fill_container",
-                  "gap": 24,
-                  "padding": [
-                    32,
-                    0,
-                    0,
-                    0
-                  ],
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "KR5iJ",
-                      "name": "stat1",
-                      "fill": "#FFFFFF",
-                      "cornerRadius": 8,
-                      "stroke": {
-                        "thickness": 1,
-                        "fill": "#CCCCCC"
-                      },
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "enabled": false,
-                        "color": "#00000000"
-                      },
-                      "layout": "vertical",
-                      "gap": 8,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "W4Trv",
-                          "name": "s1num",
-                          "fill": "#000000",
-                          "content": "50+",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 36
-                        },
-                        {
-                          "type": "text",
-                          "id": "aXgMi",
-                          "name": "s1lbl",
-                          "fill": "#666666",
-                          "content": "COMPLETED PROJECTS",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 11,
-                          "fontWeight": "normal",
-                          "letterSpacing": 4
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "zWO1s",
-                      "name": "stat2",
-                      "fill": "#FFFFFF",
-                      "cornerRadius": 8,
-                      "stroke": {
-                        "thickness": 1,
-                        "fill": "#CCCCCC"
-                      },
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "enabled": false,
-                        "color": "#00000000"
-                      },
-                      "layout": "vertical",
-                      "gap": 8,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "iKDzk",
-                          "name": "s2num",
-                          "fill": "#000000",
-                          "content": "2K+",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 36
-                        },
-                        {
-                          "type": "text",
-                          "id": "dYvsU",
-                          "name": "s2lbl",
-                          "fill": "#666666",
-                          "content": "GITHUB COMMITS",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 11,
-                          "fontWeight": "normal",
-                          "letterSpacing": 4
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "vYLb2",
-                      "name": "stat3",
-                      "fill": "#FFFFFF",
-                      "cornerRadius": 8,
-                      "stroke": {
-                        "thickness": 1,
-                        "fill": "#D71921"
-                      },
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "enabled": false,
-                        "color": "#00000000"
-                      },
-                      "layout": "vertical",
-                      "gap": 8,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "5RCwu",
-                          "name": "s3num",
-                          "fill": "#D71921",
-                          "content": "15+",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 36
-                        },
-                        {
-                          "type": "text",
-                          "id": "EQiZC",
-                          "name": "s3lbl",
-                          "fill": "#666666",
-                          "content": "TECH STACK",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 11,
-                          "fontWeight": "normal",
-                          "letterSpacing": 4
-                        }
-                      ]
-                    }
-                  ]
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -8503,21 +8335,10 @@
                       "id": "E68ff",
                       "name": "locCity",
                       "fill": "#000000",
-                      "content": "TOKYO",
+                      "content": "TOKYO,\nJAPAN",
                       "fontFamily": "Doto",
                       "fontSize": 56,
                       "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "ZdqRv",
-                      "name": "locCountry",
-                      "fill": "#666666",
-                      "content": "JAPAN",
-                      "fontFamily": "Space Mono",
-                      "fontSize": 16,
-                      "fontWeight": "normal",
-                      "letterSpacing": 6
                     },
                     {
                       "type": "text",
@@ -8546,7 +8367,7 @@
                       "width": 300,
                       "content": "Currently based in Tokyo.\nAvailable for remote work globally.",
                       "lineHeight": 1.6,
-                      "fontFamily": "Space Grotesk",
+                      "fontFamily": "Noto Sans JP",
                       "fontSize": 14,
                       "fontWeight": "normal"
                     }
@@ -8753,7 +8574,7 @@
                       "width": 300,
                       "content": "FEATURED\nWORK",
                       "lineHeight": 1,
-                      "fontFamily": "Space Grotesk",
+                      "fontFamily": "Noto Sans JP",
                       "fontSize": 34,
                       "fontWeight": "300"
                     },
@@ -8911,7 +8732,7 @@
                               "name": "c1title",
                               "fill": "#000000",
                               "content": "EmDash Portfolio",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 17,
                               "fontWeight": "500"
                             },
@@ -8984,8 +8805,9 @@
                               "textGrowth": "fixed-width",
                               "width": "fill_container",
                               "content": "A modern portfolio with headless CMS architecture and real-time content updates",
-                              "fontFamily": "Space Grotesk",
-                              "fontSize": 13
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "frame",
@@ -9143,7 +8965,7 @@
                               "name": "c2title",
                               "fill": "#000000",
                               "content": "E-Commerce Platform",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 17,
                               "fontWeight": "500"
                             },
@@ -9216,8 +9038,9 @@
                               "textGrowth": "fixed-width",
                               "width": "fill_container",
                               "content": "Full-featured online store with payment processing and inventory management",
-                              "fontFamily": "Space Grotesk",
-                              "fontSize": 13
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "frame",
@@ -9384,7 +9207,7 @@
                               "name": "c3title",
                               "fill": "#000000",
                               "content": "Real-time Chat API",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 17,
                               "fontWeight": "500"
                             },
@@ -9457,8 +9280,9 @@
                               "textGrowth": "fixed-width",
                               "width": "fill_container",
                               "content": "Scalable messaging system with real-time notifications and presence detection",
-                              "fontFamily": "Space Grotesk",
-                              "fontSize": 13
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "frame",
@@ -9568,7 +9392,7 @@
                       "width": 220,
                       "content": "PROFESSIONAL\nJOURNEY",
                       "lineHeight": 1.1,
-                      "fontFamily": "Space Grotesk",
+                      "fontFamily": "Noto Sans JP",
                       "fontSize": 24,
                       "fontWeight": "300"
                     },
@@ -9582,7 +9406,8 @@
                       "content": "Building products\nsince 2022",
                       "lineHeight": 1.5,
                       "fontFamily": "Space Mono",
-                      "fontSize": 12
+                      "fontSize": 12,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -9647,7 +9472,7 @@
                           "name": "e1title",
                           "fill": "#000000",
                           "content": "Lead Frontend Engineer",
-                          "fontFamily": "Space Grotesk",
+                          "fontFamily": "Noto Sans JP",
                           "fontSize": 16,
                           "fontWeight": "500"
                         },
@@ -9682,7 +9507,7 @@
                           "width": "fill_container",
                           "content": "Building scalable web applications with modern frameworks and best practices",
                           "lineHeight": 1.5,
-                          "fontFamily": "Space Grotesk",
+                          "fontFamily": "Noto Sans JP",
                           "fontSize": 13,
                           "fontWeight": "normal"
                         }
@@ -9741,7 +9566,7 @@
                           "name": "e2title",
                           "fill": "#000000",
                           "content": "Open Source Contributor",
-                          "fontFamily": "Space Grotesk",
+                          "fontFamily": "Noto Sans JP",
                           "fontSize": 16,
                           "fontWeight": "500"
                         },
@@ -9776,7 +9601,7 @@
                           "width": "fill_container",
                           "content": "Contributing to React, TypeScript, and Node.js ecosystem projects",
                           "lineHeight": 1.5,
-                          "fontFamily": "Space Grotesk",
+                          "fontFamily": "Noto Sans JP",
                           "fontSize": 13,
                           "fontWeight": "normal"
                         }
@@ -9825,7 +9650,7 @@
                   "width": 300,
                   "content": "TECH\nSTACK",
                   "lineHeight": 0.95,
-                  "fontFamily": "Space Grotesk",
+                  "fontFamily": "Noto Sans JP",
                   "fontSize": 34,
                   "fontWeight": "300"
                 },
@@ -9889,7 +9714,7 @@
                                   "name": "t1name",
                                   "fill": "#000000",
                                   "content": "TypeScript",
-                                  "fontFamily": "Space Grotesk",
+                                  "fontFamily": "Noto Sans JP",
                                   "fontSize": 15,
                                   "fontWeight": "500"
                                 }
@@ -9901,7 +9726,7 @@
                               "name": "t1Desc",
                               "fill": "#999999",
                               "content": "Type-safe JavaScript",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 12,
                               "fontWeight": "normal"
                             },
@@ -9974,7 +9799,7 @@
                                   "name": "t2name",
                                   "fill": "#000000",
                                   "content": "React / Next.js",
-                                  "fontFamily": "Space Grotesk",
+                                  "fontFamily": "Noto Sans JP",
                                   "fontSize": 15,
                                   "fontWeight": "500"
                                 }
@@ -9986,7 +9811,7 @@
                               "name": "t2Desc",
                               "fill": "#999999",
                               "content": "Modern web frameworks",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 12,
                               "fontWeight": "normal"
                             },
@@ -10068,7 +9893,7 @@
                                   "name": "t3name",
                                   "fill": "#000000",
                                   "content": "Docker",
-                                  "fontFamily": "Space Grotesk",
+                                  "fontFamily": "Noto Sans JP",
                                   "fontSize": 15,
                                   "fontWeight": "500"
                                 }
@@ -10080,7 +9905,7 @@
                               "name": "t3Desc",
                               "fill": "#999999",
                               "content": "Containerization platform",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 12,
                               "fontWeight": "normal"
                             },
@@ -10153,7 +9978,7 @@
                                   "name": "t4name",
                                   "fill": "#000000",
                                   "content": "PostgreSQL",
-                                  "fontFamily": "Space Grotesk",
+                                  "fontFamily": "Noto Sans JP",
                                   "fontSize": 15,
                                   "fontWeight": "500"
                                 }
@@ -10165,7 +9990,7 @@
                               "name": "t4Desc",
                               "fill": "#999999",
                               "content": "Relational database",
-                              "fontFamily": "Space Grotesk",
+                              "fontFamily": "Noto Sans JP",
                               "fontSize": 12,
                               "fontWeight": "normal"
                             },
@@ -10206,94 +10031,384 @@
               "fill": "#E8E8E8",
               "width": "fill_container",
               "height": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "kOJV6",
+      "x": 9100,
+      "y": 0,
+      "name": "mobile-header / dark / closed",
+      "width": 390,
+      "height": 64,
+      "fill": "#000000",
+      "stroke": {
+        "align": "inside",
+        "thickness": {
+          "bottom": 1
+        },
+        "fill": "#222222"
+      },
+      "padding": [
+        0,
+        20
+      ],
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "AYPJQ",
+          "name": "logoGroup",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "V41w9",
+              "fill": "#FFFFFF",
+              "content": "hayatosc",
+              "fontFamily": "Doto",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tARap",
+          "name": "controls",
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "Uu992",
+              "width": 16,
+              "height": 16,
+              "iconFontName": "moon-fill",
+              "iconFontFamily": "phosphor",
+              "fill": "#FFFFFF"
             },
             {
+              "type": "icon_font",
+              "id": "7za0H",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "menu",
+              "iconFontFamily": "lucide",
+              "fill": "#FFFFFF"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Nejjo",
+      "x": 9540,
+      "y": 0,
+      "name": "mobile-header / light / closed",
+      "width": 390,
+      "height": 64,
+      "fill": "#F5F5F5",
+      "stroke": {
+        "align": "inside",
+        "thickness": {
+          "bottom": 1
+        },
+        "fill": "#E8E8E8"
+      },
+      "padding": [
+        0,
+        20
+      ],
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "gY99N",
+          "name": "logoGroup",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "0yzZD",
+              "fill": "#000000",
+              "content": "hayatosc",
+              "fontFamily": "Doto",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "3Lpnv",
+          "name": "controls",
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "673Po",
+              "width": 16,
+              "height": 16,
+              "iconFontName": "moon",
+              "iconFontFamily": "phosphor",
+              "fill": "#555555"
+            },
+            {
+              "type": "icon_font",
+              "id": "vse66",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "menu",
+              "iconFontFamily": "lucide",
+              "fill": "#111111"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "rE3tm",
+      "x": 9100,
+      "y": 120,
+      "name": "mobile-header / dark / open",
+      "width": 390,
+      "height": 600,
+      "fill": "#000000",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "LJZdZ",
+          "name": "headerBar",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "#00000000",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#222222"
+          },
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
               "type": "frame",
-              "id": "GT7ry",
-              "name": "ctaSection",
-              "width": "fill_container",
-              "fill": "#F5F5F5",
-              "layout": "vertical",
-              "gap": 28,
-              "padding": [
-                80,
-                80,
-                100,
-                80
-              ],
+              "id": "MdlFW",
+              "name": "logoGroup",
+              "gap": 8,
               "alignItems": "center",
               "children": [
                 {
                   "type": "text",
-                  "id": "IbvvA",
-                  "name": "ctaTitle",
-                  "fill": "#000000",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "LET'S WORK\nTOGETHER",
-                  "lineHeight": 0.95,
-                  "textAlign": "center",
-                  "fontFamily": "Space Grotesk",
-                  "fontSize": 60,
-                  "fontWeight": "300"
-                },
-                {
-                  "type": "text",
-                  "id": "cx7OM",
-                  "name": "ctaSub",
-                  "fill": "#999999",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Have a project in mind? Let's create something amazing together.\nOpen to freelance opportunities and collaborations.",
-                  "textAlign": "center",
-                  "fontFamily": "Space Grotesk",
+                  "id": "muANh",
+                  "fill": "#FFFFFF",
+                  "content": "hayatosc",
+                  "fontFamily": "Doto",
                   "fontSize": 16,
                   "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "ZRzjM",
-                  "name": "ctaBtn",
-                  "height": 64,
-                  "fill": "#000000",
-                  "cornerRadius": 32,
-                  "effect": {
-                    "type": "shadow",
-                    "shadowType": "outer",
-                    "enabled": false,
-                    "color": "#00000000"
-                  },
-                  "gap": 10,
-                  "padding": [
-                    0,
-                    40
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "sWLl2",
-                      "name": "ctaBtnTxt",
-                      "fill": "#F5F5F5",
-                      "content": "CONTACT →",
-                      "fontFamily": "Space Mono",
-                      "fontSize": 13,
-                      "fontWeight": "800",
-                      "letterSpacing": 2
-                    },
-                    {
-                      "type": "icon_font",
-                      "id": "2YH0X",
-                      "name": "ctaBtnIcon",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "mail",
-                      "iconFontFamily": "lucide",
-                      "fill": "#F5F5F5"
-                    }
-                  ]
                 }
               ]
+            },
+            {
+              "type": "icon_font",
+              "id": "Bxk9m",
+              "name": "closeBtn",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "x",
+              "iconFontFamily": "lucide",
+              "fill": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "wHAgO",
+          "name": "navSection",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            48,
+            32
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "1OJtz",
+              "fill": "#FFFFFF",
+              "content": "/home",
+              "fontFamily": "Space Mono",
+              "fontSize": 36,
+              "fontWeight": "normal",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "dD0JL",
+              "fill": "#FFFFFF",
+              "content": "/blog",
+              "fontFamily": "Space Mono",
+              "fontSize": 36,
+              "fontWeight": "normal",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "erYFO",
+              "fill": "#FFFFFF",
+              "content": "/work",
+              "fontFamily": "Space Mono",
+              "fontSize": 36,
+              "fontWeight": "normal",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "6HNYS",
+              "fill": "#FFFFFF",
+              "content": "/about",
+              "fontFamily": "Space Mono",
+              "fontSize": 36,
+              "fontWeight": "normal",
+              "letterSpacing": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "cAz2x",
+      "x": 9540,
+      "y": 120,
+      "name": "mobile-header / light / open",
+      "width": 390,
+      "height": 600,
+      "fill": "#F5F5F5",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "JOsb4",
+          "name": "headerBar",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "#00000000",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#E8E8E8"
+          },
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "kXjch",
+              "name": "logoGroup",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "4RMAK",
+                  "fill": "#000000",
+                  "content": "hayatosc",
+                  "fontFamily": "Doto",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "icon_font",
+              "id": "EM1ba",
+              "name": "closeBtn",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "x",
+              "iconFontFamily": "lucide",
+              "fill": "#111111"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Ljq6B",
+          "name": "navSection",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            48,
+            32
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "dyQxC",
+              "fill": "#000000",
+              "content": "/home",
+              "fontFamily": "Space Mono",
+              "fontSize": 36,
+              "fontWeight": "normal",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "33BMC",
+              "fill": "#000000",
+              "content": "/blog",
+              "fontFamily": "Space Mono",
+              "fontSize": 36,
+              "fontWeight": "normal",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "42IEH",
+              "fill": "#000000",
+              "content": "/work",
+              "fontFamily": "Space Mono",
+              "fontSize": 36,
+              "fontWeight": "normal",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "CzJWr",
+              "fill": "#000000",
+              "content": "/about",
+              "fontFamily": "Space Mono",
+              "fontSize": 36,
+              "fontWeight": "normal",
+              "letterSpacing": -1
             }
           ]
         }

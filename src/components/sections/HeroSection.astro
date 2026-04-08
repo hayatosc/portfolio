@@ -1,0 +1,77 @@
+---
+interface Props {
+	label?: string
+	name?: string
+	title?: string
+	description?: string
+}
+
+const {
+	label = "HELLO, I'M",
+	name = 'hayatosc',
+	title = 'engineer',
+	description = 'Crafting seamless digital experiences with modern web technologies.\nSpecializing in full-stack development, cloud architecture, and UI/UX design.',
+} = Astro.props
+---
+
+<section class="hero">
+	<p class="hero-label">{label}</p>
+	<div class="hero-headline">
+		<span class="hero-name">{name}</span>
+		<span class="hero-title">{title}</span>
+	</div>
+	<p class="hero-desc">{description}</p>
+</section>
+
+<style>
+.hero {
+	padding: 80px 80px 60px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	@media (max-width: 768px) {
+		padding: 48px 24px 40px;
+	}
+}
+
+.hero-label {
+	font-family: var(--font-mono);
+	font-size: 11px;
+	font-weight: 600;
+	color: var(--color-fg-muted);
+	letter-spacing: 8px;
+	text-transform: uppercase;
+}
+
+.hero-headline {
+	display: flex;
+	flex-direction: column;
+	line-height: 1;
+}
+
+.hero-name {
+	font-family: var(--font-display);
+	font-size: clamp(48px, 5vw, 72px);
+	font-weight: 400;
+	color: var(--color-fg);
+}
+
+.hero-title {
+	font-family: var(--font-mono);
+	font-size: clamp(48px, 5vw, 72px);
+	font-weight: 300;
+	color: var(--color-fg);
+	letter-spacing: -2px;
+	line-height: 0.9;
+}
+
+.hero-desc {
+	font-size: 15px;
+	color: var(--color-fg-secondary);
+	line-height: 1.6;
+	max-width: 520px;
+	margin-top: 4px;
+	white-space: pre-line;
+}
+</style>

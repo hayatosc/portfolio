@@ -1,0 +1,161 @@
+---
+import { Briefcase, Github } from 'lucide-astro'
+
+const experiences = [
+	{
+		Icon: Briefcase,
+		title: 'Lead Frontend Engineer',
+		company: 'TECH STARTUP · REMOTE',
+		date: 'JAN 2023 — PRESENT',
+		description:
+			'Building scalable web applications with modern frameworks and best practices',
+	},
+	{
+		Icon: Github,
+		title: 'Open Source Contributor',
+		company: 'GITHUB · 500+ CONTRIBUTIONS',
+		date: 'MAR 2022 — PRESENT',
+		description:
+			'Contributing to React, TypeScript, and Node.js ecosystem projects',
+	},
+]
+---
+
+<section class="experience">
+	<div class="exp-left">
+		<div class="accent-bar"></div>
+		<h2 class="exp-title">PROFESSIONAL<br>JOURNEY</h2>
+		<p class="exp-years">Building products<br>since 2022</p>
+	</div>
+
+	<div class="exp-items">
+		{experiences.map(({ Icon, title, company, date, description }) => (
+			<div class="exp-card">
+				<div class="exp-icon">
+					<Icon size={20} aria-hidden="true" />
+				</div>
+				<div class="exp-body">
+					<h3 class="exp-title-item">{title}</h3>
+					<p class="exp-company">{company}</p>
+					<p class="exp-date">{date}</p>
+					<p class="exp-desc">{description}</p>
+				</div>
+			</div>
+		))}
+	</div>
+</section>
+
+<style>
+.experience {
+	padding: 70px 80px;
+	display: flex;
+	gap: 50px;
+	align-items: flex-start;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		padding: 48px 24px;
+		gap: 32px;
+	}
+}
+
+.exp-left {
+	width: 220px;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+}
+
+.accent-bar {
+	width: 60px;
+	height: 4px;
+	background: var(--color-fg);
+	border-radius: 2px;
+}
+
+.exp-title {
+	font-size: 24px;
+	font-weight: 300;
+	color: var(--color-fg);
+	line-height: 1.1;
+}
+
+.exp-years {
+	font-family: var(--font-mono);
+	font-size: 12px;
+	color: var(--color-fg-muted);
+	line-height: 1.5;
+	white-space: pre-line;
+}
+
+.exp-items {
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.exp-card {
+	background: var(--color-bg-card);
+	border: 1px solid var(--color-border);
+	border-radius: 12px;
+	padding: 24px;
+	display: flex;
+	gap: 16px;
+}
+
+.exp-icon {
+	width: 40px;
+	height: 40px;
+	flex-shrink: 0;
+	background: #1a1a1a;
+	border: 1px solid var(--color-border-strong);
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #3a8fa0;
+}
+
+.exp-body {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	flex: 1;
+	min-width: 0;
+}
+
+.exp-title-item {
+	font-size: 16px;
+	font-weight: 500;
+	color: var(--color-fg);
+}
+
+.exp-company {
+	font-family: var(--font-mono);
+	font-size: 11px;
+	color: var(--color-fg-muted);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.exp-date {
+	font-family: var(--font-mono);
+	font-size: 11px;
+	color: var(--color-fg-secondary);
+	letter-spacing: 1px;
+}
+
+.exp-desc {
+	font-size: 13px;
+	color: var(--color-fg-muted);
+	line-height: 1.5;
+	margin-top: 4px;
+}
+</style>

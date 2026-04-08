@@ -15,6 +15,7 @@ interface Props {
 }
 
 const { title, description, image, type = 'website' } = Astro.props
+const hasSidebar = Astro.slots.has('sidebar')
 const settings = await getSiteSettings()
 const siteTitle = settings?.title || 'Studio'
 const fullTitle = title ? `${title} — ${siteTitle}` : siteTitle
@@ -55,8 +56,69 @@ const pageCtx = createPublicPageContext({
 		>
 	</head>
 	<body>
-		<Header client:load />
-
-		<main><slot /></main>
+		{hasSidebar ? (
+			<div class="layout-sidebar-page">
+				<aside class="layout-sidebar">
+					<slot name="sidebar" />
+				</aside>
+				<div class="layout-main">
+					<Header client:load />
+					<main><slot /></main>
+				</div>
+			</div>
+		) : (
+			<>
+				<Header client:load />
+				<main><slot /></main>
+			</>
+		)}
 	</body>
 </html>
+
+<style>
+.layout-sidebar-page {
+	display: flex;
+	align-items: flex-start;
+	min-height: 100vh;
+	gap: 32px;
+	padding: 32px;
+	background: var(--color-bg);
+	box-sizing: border-box;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		padding: 0;
+		gap: 0;
+	}
+}
+
+.layout-sidebar {
+	width: 390px;
+	flex-shrink: 0;
+	position: sticky;
+	top: 32px;
+	max-height: calc(100vh - 64px);
+	border-radius: 54px;
+	overflow: hidden;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		position: relative;
+		top: auto;
+		max-height: none;
+		border-radius: 0;
+	}
+}
+
+.layout-main {
+	flex: 1;
+	min-width: 0;
+	background: var(--color-bg);
+	border-radius: 16px;
+	overflow: hidden;
+
+	@media (max-width: 768px) {
+		border-radius: 0;
+	}
+}
+</style>

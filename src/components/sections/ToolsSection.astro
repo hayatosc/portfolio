@@ -1,0 +1,141 @@
+---
+import { Atom, Box, Container, Database } from 'lucide-astro'
+
+const tools = [
+	{
+		Icon: Box,
+		name: 'TypeScript',
+		desc: 'Type-safe JavaScript',
+		progress: 90,
+	},
+	{
+		Icon: Atom,
+		name: 'React / Next.js',
+		desc: 'Modern web frameworks',
+		progress: 82,
+	},
+	{
+		Icon: Container,
+		name: 'Docker',
+		desc: 'Containerization platform',
+		progress: 72,
+	},
+	{
+		Icon: Database,
+		name: 'PostgreSQL',
+		desc: 'Relational database',
+		progress: 78,
+	},
+]
+---
+
+<section class="tools">
+	<div class="tools-header">
+		<div class="accent-bar"></div>
+		<h2 class="tools-title">TECH<br>STACK</h2>
+	</div>
+
+	<div class="tools-grid">
+		{tools.map(({ Icon, name, desc, progress }) => (
+			<div class="tool-card">
+				<div class="tool-header">
+					<Icon size={22} aria-hidden="true" class="tool-icon" />
+					<span class="tool-name">{name}</span>
+				</div>
+				<p class="tool-desc">{desc}</p>
+				<div class="tool-progress" role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100} aria-label={name}>
+					<div class="tool-progress-fill" style={`width: ${progress}%`}></div>
+				</div>
+			</div>
+		))}
+	</div>
+</section>
+
+<style>
+.tools {
+	padding: 70px 80px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+
+	@media (max-width: 768px) {
+		padding: 48px 24px;
+	}
+}
+
+.tools-header {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.accent-bar {
+	width: 60px;
+	height: 4px;
+	background: var(--color-fg);
+	border-radius: 2px;
+}
+
+.tools-title {
+	font-size: 34px;
+	font-weight: 300;
+	color: var(--color-fg);
+	line-height: 0.95;
+}
+
+.tools-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+
+	@media (max-width: 600px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.tool-card {
+	background: var(--color-bg-card);
+	border: 1px solid var(--color-border);
+	border-radius: 12px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.tool-header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+:global(.tool-icon) {
+	color: var(--color-fg-secondary);
+	flex-shrink: 0;
+}
+
+.tool-name {
+	font-size: 15px;
+	font-weight: 500;
+	color: var(--color-fg);
+}
+
+.tool-desc {
+	font-size: 12px;
+	color: var(--color-fg-muted);
+}
+
+.tool-progress {
+	height: 4px;
+	background: #1a1a1a;
+	border-radius: 2px;
+	overflow: hidden;
+	margin-top: 4px;
+}
+
+.tool-progress-fill {
+	height: 100%;
+	background: #e8e8e8;
+	border-radius: 2px;
+}
+</style>

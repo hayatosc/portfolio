@@ -11,7 +11,9 @@
 	:root {
 		/* Fonts */
 		--font-mono: var(--font-space-mono), monospace, sans-serif;
-		--font-sans: "Noto Sans JP Local", var(--font-noto-sans-jp), 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+		--font-sans:
+			"Noto Sans JP Local", var(--font-noto-sans-jp),
+			"Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 		--font-display: var(--font-doto), sans-serif;
 		--font-size: 16px;
 

@@ -1,11 +1,47 @@
 ---
+export const prerender = true
+
 import profile from '../assets/profile.jpg'
 import SpotifyHero from '../components/SpotifyHero.astro'
+import ActivitiesSection from '../components/sections/ActivitiesSection.astro'
+import ExperienceSection from '../components/sections/ExperienceSection.astro'
+import HeroSection from '../components/sections/HeroSection.astro'
+import LocationSection from '../components/sections/LocationSection.astro'
+import ProjectsSection from '../components/sections/ProjectsSection.astro'
+import ToolsSection from '../components/sections/ToolsSection.astro'
 import Base from '../layouts/Base.astro'
+
+const projects = [
+	{
+		title: 'EmDash Portfolio',
+		description:
+			'A modern portfolio with headless CMS architecture and real-time content updates',
+		tags: ['Astro', 'TypeScript'],
+		href: '/work',
+		badge: 'LIVE',
+	},
+	{
+		title: 'E-Commerce Platform',
+		description:
+			'Full-featured online store with payment processing and inventory management',
+		tags: ['Next.js', 'Stripe'],
+		href: '/work',
+		badge: 'PRODUCTION',
+	},
+	{
+		title: 'Real-time Chat API',
+		description:
+			'Scalable messaging system with real-time notifications and presence detection',
+		tags: ['WebSocket', 'Redis'],
+		href: '/work',
+		badge: 'BETA',
+	},
+]
 ---
 
 <Base>
 	<SpotifyHero
+		slot="sidebar"
 		name="hayatosc"
 		job="Student Engineer"
 		bio="Tokyo University of Science"
@@ -16,4 +52,23 @@ import Base from '../layouts/Base.astro'
 		photo={profile}
 		startYear="2023"
 	/>
+
+	<HeroSection />
+	<LocationSection />
+	<hr class="divider">
+	<ProjectsSection projects={projects} />
+	<hr class="divider">
+	<ExperienceSection />
+	<hr class="divider">
+	<ToolsSection />
+	<hr class="divider">
+	<ActivitiesSection />
 </Base>
+
+<style>
+.divider {
+	border: none;
+	border-top: 1px solid var(--color-border);
+	margin: 0;
+}
+</style>

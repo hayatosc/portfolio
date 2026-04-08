@@ -48,14 +48,14 @@ onMount(() => {
 				class="icon"
 				size={16}
 				aria-hidden="true"
-				onclick={toggleColorScheme}
+				onclick={() => { toggleColorScheme(); syncColorScheme() }}
 			/>
 		{:else}
 			<Moon
 				class="icon"
 				size={16}
 				aria-hidden="true"
-				onclick={toggleColorScheme}
+				onclick={() => { toggleColorScheme(); syncColorScheme() }}
 			/>
 		{/if}
 	</div>
@@ -71,14 +71,14 @@ onMount(() => {
 					class="icon"
 					size={16}
 					aria-hidden="true"
-					onclick={toggleColorScheme}
+					onclick={() => { toggleColorScheme(); syncColorScheme() }}
 				/>
 			{:else}
 				<Moon
 					class="icon"
 					size={16}
 					aria-hidden="true"
-					onclick={toggleColorScheme}
+					onclick={() => { toggleColorScheme(); syncColorScheme() }}
 				/>
 			{/if}
 			<button

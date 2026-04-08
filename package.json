@@ -20,13 +20,16 @@
 	"dependencies": {
 		"@astrojs/cloudflare": "^13.1.6",
 		"@astrojs/react": "^5.0.0",
+		"@astrojs/svelte": "^8.0.4",
 		"@emdash-cms/cloudflare": "^0.1.0",
 		"astro": "^6.1.2",
 		"emdash": "^0.1.0",
 		"kiso.css": "^1.2.4",
 		"lucide-astro": "^0.556.0",
+		"lucide-svelte": "^1.0.1",
 		"react": "^19.2.4",
-		"react-dom": "^19.2.4"
+		"react-dom": "^19.2.4",
+		"svelte": "^5.55.1"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.7",

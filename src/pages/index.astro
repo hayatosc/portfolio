@@ -1,22 +1,7 @@
 ---
-import { getEmDashCollection } from 'emdash'
 import profile from '../assets/profile.jpg'
-import ProjectCard from '../components/ProjectCard.astro'
 import SpotifyHero from '../components/SpotifyHero.astro'
 import Base from '../layouts/Base.astro'
-
-const { entries: projects, cacheHint } = await getEmDashCollection('projects')
-
-Astro.cache.set(cacheHint)
-
-// Get the 4 most recent projects for the homepage
-const featuredProjects = projects
-	.toSorted((a, b) => {
-		const dateA = a.data.publishedAt?.getTime() ?? 0
-		const dateB = b.data.publishedAt?.getTime() ?? 0
-		return dateB - dateA
-	})
-	.slice(0, 4)
 ---
 
 <Base>
@@ -31,34 +16,4 @@ const featuredProjects = projects
 		photo={profile}
 		startYear="2023"
 	/>
-	{featuredProjects.length > 0 ? (
-			<section class="featured">
-				<header class="section-header">
-					<h2 class="section-title">Selected Work</h2>
-					<a href="/work" class="section-link">
-						View all projects &rarr;
-					</a>
-				</header>
-				<div class="projects-grid">
-					{featuredProjects.map((project) => (
-						<ProjectCard
-							title={project.data.title ?? "Untitled"}
-							summary={project.data.summary}
-							featuredImage={project.data.featured_image ?? ""}
-							href={`/work/${project.id}`}
-							client={project.data.client}
-							year={project.data.year}
-						/>
-					))}
-				</div>
-			</section>
-		) : (
-			<section class="empty-state">
-				<h2>No projects yet</h2>
-				<p>Add your first project in the admin panel.</p>
-				<a href="/_emdash/admin/content/projects/new" class="btn">
-					Add a project
-				</a>
-			</section>
-		)}
 </Base>

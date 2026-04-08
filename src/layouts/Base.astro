@@ -5,6 +5,8 @@ import { createPublicPageContext } from 'emdash/page'
 import { EmDashHead } from 'emdash/ui'
 import '../styles/style.css'
 
+import Header from '../components/Header.svelte'
+
 interface Props {
 	title?: string
 	description?: string
@@ -51,132 +53,10 @@ const pageCtx = createPublicPageContext({
 			title={`${siteTitle} RSS Feed`}
 			href="/rss.xml"
 		>
-		<script is:inline>
-		// Apply theme immediately to prevent flash
-		;(() => {
-			var c = document.cookie
-			var i = c.indexOf('theme=')
-			var theme = i >= 0 ? c.slice(i + 6).split(';')[0] : null
-			if (theme === 'dark' || theme === 'light') {
-				document.documentElement.classList.add(theme)
-			} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				document.documentElement.classList.add('dark')
-			}
-		})()
-		</script>
 	</head>
 	<body>
-		<header class="site-header">
-			<nav class="nav">
-				<a href="/" class="site-title">{siteTitle}</a>
-				<div class="nav-links">
-					{menu?.items.map((item) => (
-							<a href={item.url} target={item.target}>
-								{item.label}
-							</a>
-						))}
-					<a href="/_emdash/admin" class="nav-admin">Admin</a>
-				</div>
-			</nav>
-		</header>
+		<Header client:load />
 
 		<main><slot /></main>
-
-		<footer class="site-footer">
-			<div class="footer-content">
-				<div class="footer-brand">
-					<span class="footer-logo">{siteTitle}</span>
-					<p class="footer-tagline">
-						{settings?.tagline || "Design & Development"}
-					</p>
-				</div>
-				<div class="footer-right">
-					<div class="theme-switcher">
-						<button
-							type="button"
-							class="theme-btn"
-							data-theme="light"
-							aria-label="Light mode"
-						>
-							Light
-						</button>
-						<button
-							type="button"
-							class="theme-btn"
-							data-theme="dark"
-							aria-label="Dark mode"
-						>
-							Dark
-						</button>
-						<button
-							type="button"
-							class="theme-btn"
-							data-theme="system"
-							aria-label="System theme"
-						>
-							System
-						</button>
-					</div>
-					<p class="footer-powered">
-						Powered by <a href="https://emdashcms.com">EmDash</a>
-					</p>
-				</div>
-			</div>
-		</footer>
-
-		<script>
-		// Theme switcher
-		const THEME_REGEX = /theme=([^;]+)/
-		const themeBtns = document.querySelectorAll<HTMLButtonElement>('.theme-btn')
-		const root = document.documentElement
-
-		function setTheme(theme: string) {
-			const secure = location.protocol === 'https:' ? '; Secure' : ''
-			if (theme === 'system') {
-				// biome-ignore lint/suspicious/noDocumentCookie: intentional cookie manipulation
-				document.cookie = `theme=; path=/; max-age=0; SameSite=Lax${secure}`
-				root.classList.remove('light', 'dark')
-				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-					root.classList.add('dark')
-				}
-			} else {
-				// biome-ignore lint/suspicious/noDocumentCookie: intentional cookie manipulation
-				document.cookie = `theme=${theme}; path=/; max-age=31536000; SameSite=Lax${secure}`
-				root.classList.remove('light', 'dark')
-				root.classList.add(theme)
-			}
-			updateActiveBtn(theme)
-		}
-
-		function updateActiveBtn(theme: string) {
-			themeBtns.forEach((btn) => {
-				btn.classList.toggle('active', btn.dataset.theme === theme)
-			})
-		}
-
-		function getStoredTheme(): string {
-			const match = document.cookie.match(THEME_REGEX)
-			return match ? match[1] : 'system'
-		}
-
-		// Initialize - apply stored theme on load
-		const storedTheme = getStoredTheme()
-		setTheme(storedTheme)
-
-		themeBtns.forEach((btn) => {
-			btn.addEventListener('click', () => {
-				setTheme(btn.dataset.theme || 'system')
-			})
-		})
-
-		// Listen for system preference changes
-		window
-			.matchMedia('(prefers-color-scheme: dark)')
-			.addEventListener('change', (e) => {
-				if (getStoredTheme() === 'system') {
-					root.classList.toggle('dark', e.matches)
-				}
-			})
-		</script>
 	</body>
 </html>
